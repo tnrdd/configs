@@ -26,6 +26,7 @@
     linum-relative
     neotree
     yasnippet
+    yasnippet-snippets
     )
 
   )
