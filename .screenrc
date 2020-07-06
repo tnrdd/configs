@@ -115,3 +115,6 @@ bind ^] paste [.]
 hardstatus alwayslastline "%Lw"
 
 hardstatus string '%{= kg}[ %{R}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
+
+# Erase background with current bg color 
+defbce "on" 
