@@ -6,7 +6,7 @@ XTerm*ttyModes:              erase ^?
 XTerm*translations:          #override \n\
 Ctrl Shift <Key>C:           copy-selection(CLIPBOARD) \n\
 Ctrl Shift <Key>V:           insert-selection(CLIPBOARD)
-xterm*faceName:              Courier Prime
+xterm*faceName:              Courier Prime Code
 xterm*faceSize:              18
 xterm*cursorColor:           #4eb4fe
 XTerm*background:            #333333
