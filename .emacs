@@ -60,7 +60,7 @@
    '(hc-zenburn-theme evil-surround yasnippet-snippets yasnippet neotree linum-relative evil-leader evil-escape evil)))
 (custom-set-faces
 
- '(default ((t (:family "FreeMono" :foundry "GNU " :slant normal :weight medium :height 158 :width normal))))
+ '(default ((t (:family "Courier Prime Code" :foundry "Quote-Unquote Fonts" :slant normal :weight medium :height 158 :width normal))))
  '(font-lock-comment-face ((t (:foreground "#8CAC8C" :slant italic)))))
 (require 'evil)
 (evil-mode 1)
