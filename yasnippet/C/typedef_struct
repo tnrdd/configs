@@ -2,7 +2,6 @@
 # name: typedef struct ... { ... }
 # key: tstruct
 # --
-typedef struct $1 $1
-struct ${1:name} {
-$2
-};
+typedef struct {
+$1
+}$2;
