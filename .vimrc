@@ -4,8 +4,9 @@ set clipboard=unnameplus
 let g:zenburn_high_Constrast=1
 let g:zenburn_italic_Comment=1
 colorscheme zenburn
-inoremap kj <esc>
 let mapleader = " "
+inoremap kj <esc>
+nnoremap <leader>w :w<CR>
 filetype plugin indent on
 syntax on
 set encoding=utf-8
