@@ -17,5 +17,3 @@ let g:user_emmet_expandabbr_key='<C-z>'
 let g:user_emmet_settings={'javascript': {'extends':'jsx'}, 'typescript': {'extends':'jsx'}}
 packloadall
 let g:prettier#config#use_tabs = 'false'
-autocmd BufNewFile,BufRead *.html :autocmd TextChanged,TextChangedI <buffer> silent write
-autocmd BufNewFile,BufRead *.css :autocmd TextChanged,TextChangedI <buffer> silent write
