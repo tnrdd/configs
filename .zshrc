@@ -6,7 +6,6 @@ setopt prompt_subst
 # Run vcs_info just before a prompt is displayed (precmd)
 add-zsh-hook precmd vcs_info
 # add ${vcs_info_msg_0} to the prompt
-# e.g. here we add the Git information in red  
 PROMPT=$'%F{cyan}%n@%m%f %F{yellow}%d%f\$vcs_info_msg_0_\n%F{blue}$%f '
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
