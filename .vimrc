@@ -2,9 +2,8 @@ unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
 set mouse=
 set ttymouse=
-set clipboard=unnameplus
-:set number relativenumber
-:set number nu rnu
+set number relativenumber
+set number nu rnu
 let g:zenburn_high_Constrast=1
 let g:zenburn_italic_Comment=1
 colorscheme zenburn
