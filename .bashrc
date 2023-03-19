@@ -178,3 +178,7 @@ function parse_git_dirty {
   echo ""
  fi
 }
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
