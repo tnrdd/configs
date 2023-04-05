@@ -1,0 +1,14 @@
+[user]
+  name = tnrdd
+  email = tnrdd@tutanota.com
+  signingkey = # ~/.ssh/<pub_key>
+[core]
+  editor = vim
+[pull]
+  rebase = true
+[commit]
+  gpgsign = true
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  allowedSignersFile = # ~/.ssh/allowed_signers

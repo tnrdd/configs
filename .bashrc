@@ -47,15 +47,13 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 #[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
+
+setxkbmap -option ctrl:swapcaps
+eval "$(ssh-agent -s)"
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
@@ -76,21 +74,11 @@ fi
 if [ "$color_prompt" = yes ]; then
    PS1="\[\e[0;1;38;5;75m\]\u\[\e[0;1;38;5;75m\]@\[\e[0;1;38;5;75m\]\h \[\e[0;1;38;5;246m\]\s \[\e[0;1;38;5;229m\]\w \[\e[0;38;5;217m\]\[\e[0;38;5;217m\]\`parse_git_branch\`\[\e[0;38;5;217m\]\[\e[0m\]\n\[\e[1;38;5;75m\]\[\e[48;5;0m\]$ \[\e[0;38;5;252m\]\[\e[48;5;0m\]"
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${chroot:}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
 export TERM=xterm-256color
-
-# If this is an xterm set the title to user@host:dir
-#case "$TERM" in
-#xterm*|rxvt*)
-#    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-#    ;;
-#*)
-#    ;;
-#esac
-
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -182,3 +170,9 @@ function parse_git_dirty {
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/go/bin
