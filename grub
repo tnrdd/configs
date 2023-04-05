@@ -3,7 +3,7 @@
 GRUB_DEFAULT=0
 GRUB_TIMEOUT=5
 GRUB_DISTRIBUTOR="Arch"
-GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet mce=ignore_ce audit=0 nosoftlockup nowatchdog module_blacklist=watchdog modprobe.blacklist=sp5100_tco idle=poll skew_tick=1 isolcpus=nohz,domain,3,4,5,6 irqaffinity=0,1,2 hugepagesz=2MB transparent_hugepage=never hugepages=1 nohz=on nohz_full=3,4,5,6 tsc=reliable"
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet mce=ignore_ce audit=0 nosoftlockup nowatchdog module_blacklist=watchdog modprobe.blacklist=sp5100_tco idle=poll skew_tick=1 isolcpus=nohz,domain,3,4,5,6 irqaffinity=0,1,2 rcu_nocbs=0-11 hugepagesz=2MB transparent_hugepage=never hugepages=1 nohz=on nohz_full=3,4,5,6 tsc=reliable"
 GRUB_CMDLINE_LINUX="rootfstype=ext4 cryptdevice=/dev/nvme0n1p3:luks"
 
 # Preload both GPT and MBR modules so that they are not missed
