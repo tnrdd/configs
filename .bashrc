@@ -53,7 +53,6 @@ case "$TERM" in
 esac
 
 setxkbmap -option ctrl:swapcaps
-eval "$(ssh-agent -s)"
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
