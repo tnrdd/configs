@@ -14,6 +14,8 @@ filetype plugin indent on
 syntax on
 set encoding=utf-8
 set autoindent expandtab tabstop=2 shiftwidth=2
+autocmd BufNewFile,BufRead *.huff setfiletype huff
+autocmd FileType huff setlocal noexpandtab shiftwidth=8 tabstop=8
 autocmd FileType c setlocal noexpandtab shiftwidth=8 tabstop=8
 let g:user_emmet_expandabbr_key='<C-z>'
 let g:user_emmet_settings={'javascript': {'extends':'jsx'}, 'typescript': {'extends':'jsx'}}
