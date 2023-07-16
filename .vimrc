@@ -19,4 +19,5 @@ autocmd FileType huff setlocal noexpandtab shiftwidth=8 tabstop=8
 autocmd FileType c setlocal noexpandtab shiftwidth=8 tabstop=8
 let g:user_emmet_expandabbr_key='<C-z>'
 let g:user_emmet_settings={'javascript': {'extends':'jsx'}, 'typescript': {'extends':'jsx'}}
+let g:rustfmt_autosave = 1
 packloadall
