@@ -53,6 +53,6 @@ ssh-add $HOME/.ssh/id_ed25519
 
 i3 &
 xclock -geometry 50x50-1+1 &
-xrandr --output DP-0 --mode 1920x1080 --rate 360 &
+xrandr --output DP-2 --primary --mode 1920x1080 --rate 360 --output DP-0 --mode 3840x2160 --rate 240 --dpi 240 --right-of DP-2
 xterm -geometry 80x50+494+51 &
 exec xterm -geometry 80x20+494-0
